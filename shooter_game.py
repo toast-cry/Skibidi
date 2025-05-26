@@ -8,6 +8,7 @@ from random import randint
 img_back = 'galaxy.jpg'
 img_hero = 'rocket.png'
 img_ufo = 'ufo.png'
+#These are the npc
 class GameSprite(sprite.Sprite):
     def __init__(self, player_image, player_x, player_y, size_x, size_y, player_speed):
         super().__init__()
@@ -53,7 +54,7 @@ class Bullet(GameSprite):
         self.rect.y -= self.speed
         if self.rect.y < 0:
             self.kill()
-
+#The sprite class ends here
 win_width = 700
 win_height = 500
 window = display.set_mode((win_width, win_height))
